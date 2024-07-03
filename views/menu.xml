@@ -6,5 +6,8 @@
         <menuitem name="Студент" id="main_menu_root"  parent="vuz_menu" action="model1_action_menu"/> 
         <menuitem name="Группа" id="sub_menu_root" action="model_group_action_menu"  parent="vuz_menu"/> 
         <menuitem name="Преподаватель" id="prepod_menu_root" action="prepod_model_action_menu"  parent="vuz_menu"/> 
+        <menuitem name="Журнал" id="journal_menu_root" action="model_journal_action_menu"  parent="vuz_menu"/> 
+        <menuitem name="Оценки" id="grades_menu_root" action="model_student_grades_action_menu"  parent="vuz_menu"/> 
+        <menuitem name="Предметы" id="subjects_menu_root" action="model_subject_action_menu"  parent="vuz_menu"/> 
     </data>
 </odoo>

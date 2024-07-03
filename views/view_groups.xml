@@ -45,7 +45,7 @@
                                 </tree>
                             </field>
                         </page>
-                        <page string="Оценки студентов">
+                        <!-- <page string="Оценки студентов">
                             <field name="grades_table">
                                 <tree>
                                     <field name="student_id"/>
@@ -54,7 +54,7 @@
                                     <field name="date"/>
                                 </tree>
                             </field>
-                        </page>
+                        </page> -->
                     </notebook>
                 </sheet>
             </form>

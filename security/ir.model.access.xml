@@ -55,5 +55,41 @@
             <field name="perm_create">0</field>
             <field name="perm_unlink">0</field>
         </record>
+        <record id="access_my_module_vuz_journal_student" model="ir.model.access">
+            <field name="name">access my module journal student</field>
+            <field name="model_id" ref="new_module.model_new_module_journal" />
+            <field name="group_id" ref="new_module.group_vuz_student" />
+            <field name="perm_read">1</field>
+            <field name="perm_write">0</field>
+            <field name="perm_create">0</field>
+            <field name="perm_unlink">0</field>
+        </record>
+        <record id="access_my_module_vuz_journal_prepod" model="ir.model.access">
+            <field name="name">access my module journal prepod</field>
+            <field name="model_id" ref="new_module.model_new_module_journal" />
+            <field name="group_id" ref="new_module.group_vuz_prepod" />
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+        <record id="access_my_module_vuz_subject_prepod" model="ir.model.access">
+            <field name="name">access my module subject prepod</field>
+            <field name="model_id" ref="new_module.model_new_module_subject" />
+            <field name="group_id" ref="new_module.group_vuz_prepod" />
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+        <record id="access_my_module_vuz_subject_student" model="ir.model.access">
+            <field name="name">access my module subject student</field>
+            <field name="model_id" ref="new_module.model_new_module_subject" />
+            <field name="group_id" ref="new_module.group_vuz_student" />
+            <field name="perm_read">1</field>
+            <field name="perm_write">0</field>
+            <field name="perm_create">0</field>
+            <field name="perm_unlink">0</field>
+        </record>
     </data>
 </odoo>

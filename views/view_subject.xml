@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="model_subject_view_list" model="ir.ui.view">
+        <field name="name">model_subject.view.list</field>
+        <field name="model">new_module.subject</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml"> 
+            <tree>
+                <field name="name"/>
+                <field name="teacher_ids"/>       
+            </tree>
+        </field>
+    </record>
+
+     <record id="model_subject_view_form" model="ir.ui.view">
+        <field name="name">model_subject.view.form</field>
+        <field name="model">new_module.subject</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml"> 
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="teacher_ids"/>  
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+   
+    <record id = "model_subject_action_menu" model = "ir.actions.act_window">
+        <field name="name">Учебные предметы</field>
+        <field name="res_model">new_module.subject</field>
+        <field name="views">[[False, "tree"], [False, "form"]]</field> 
+    </record>
+</odoo>

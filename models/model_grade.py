@@ -1,13 +1,13 @@
-from odoo import _, fields, models
-
+from odoo import _, fields, models, api
 
 class Grades(models.Model):
-    _name="new_module.student_grades"
-    _description="This is my grades"
+    _name = "new_module.student_grades"
+    _description = "This is my grades"
     
-    student_id = fields.Many2one('new_module.students', string='Студент', required=True)
-    group_id = fields.Many2one('new_module.groups', string='Группа', required=True)
-    subject_id = fields.Many2one('new_module.subjects', string='Предмет', required=True)
-    grade = fields.Integer(string='Оценка', required=True)
-    teacher_id = fields.Many2one('new_module.prepods', string='Преподаватель', required=True)
-    date = fields.Date(string='Дата', required=True)
+    grade = fields.Char(string="Оценка")
+    display_name = fields.Char(compute="_compute_display_name", store=True)
+    date = fields.Date(string='Дата')
+    
+    def _compute_display_name(self):
+        for record in self:
+            record.display_name = record.grade

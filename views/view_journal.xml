@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="model_journal_view_list" model="ir.ui.view">
+        <field name="name">model_journal.view.list</field>
+        <field name="model">new_module.journal</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml"> 
+            <tree>
+                <field name="f_student"/>
+                <field name="f_subj"/>
+                <field name="f_grade"/>         
+            </tree>
+        </field>
+    </record>
+
+     <record id="model_journal_view_form" model="ir.ui.view">
+        <field name="name">model_journal.view.form</field>
+        <field name="model">new_module.journal</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml"> 
+            <form>
+                <sheet>
+                    <group>
+                        <field name="f_student"/>
+                        <field name="f_subj"/>
+                        <field name="f_grade"/>    
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+   
+    <record id = "model_journal_action_menu" model = "ir.actions.act_window">
+        <field name="name">Журнал оценок</field>
+        <field name="res_model">new_module.journal</field>
+        <field name="views">[[False, "tree"], [False, "form"]]</field> 
+    </record>
+</odoo>

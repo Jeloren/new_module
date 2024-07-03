@@ -17,7 +17,7 @@ class Groups(models.Model):
     
     prepods_table = fields.Many2many(string = 'Преподаватели', comodel_name = "new_module.prepods", relation = "new_module_prepods_rel", column1 = "prepod_id", column2 = "group_id")
     
-    grades_table = fields.One2many('new_module.student_grades', 'group_id', string='Оценки')
+    # grades_table = fields.One2many('new_module.student_grades', 'group_id', string='Оценки')
 
     
     # r_f_prepod_name = fields.Char(string = "Имя преподавателя", related = "f_prepod.first_name")

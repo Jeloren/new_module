@@ -15,7 +15,7 @@ class Students(models.Model):
    
     f_group = fields.Many2one(string = 'Группа студента', comodel_name = "new_module.groups")
     
-    grades_table = fields.One2many('new_module.student_grades', 'student_id', string='Оценки')
+    # grades_table = fields.One2many('new_module.student_grades', 'student_id', string='Оценки')
     
     display_name = fields.Char(compute = "Method")
    

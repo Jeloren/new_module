@@ -17,9 +17,9 @@ class Prepods(models.Model):
    
     f_prep_group = fields.Many2one(string = 'Преподаватели группы', comodel_name = "new_module.groups")
     
-    grades_given = fields.One2many('new_module.student_grades', 'teacher_id', string='Оценки')
+    # grades_given = fields.One2many('new_module.student_grades', 'teacher_id', string='Оценки')
    
-    subject_ids = fields.Many2many(comodel_name = 'new_module.subjects', string="Предметы", relation = "new_module_subject_rel")  
+    # subject_ids = fields.Many2many(comodel_name = 'new_module.subjects', string="Предметы", relation = "new_module_subject_rel")  
     
     def Method(self):
         for record in self:
