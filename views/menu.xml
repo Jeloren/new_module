@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- <odoo>
-    <menuitem name="Моё меню" id="newModule_menu_item" action="model1_action_menu" active="true"/>
-</odoo> -->
 
 <odoo>
     <data>
