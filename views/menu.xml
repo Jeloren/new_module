@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <odoo>
+    <menuitem name="Моё меню" id="newModule_menu_item" action="model1_action_menu" active="true"/>
+</odoo> -->
+
+<odoo>
+    <data>
+        <menuitem name="ВУЗ" id = "vuz_menu"/>
+        <menuitem name="Студент" id="main_menu_root"  parent="vuz_menu" action="model1_action_menu"/> 
+        <menuitem name="Группа" id="sub_menu_root" action="model_group_action_menu"  parent="vuz_menu"/> 
+        <menuitem name="Преподаватель" id="prepod_menu_root" action="prepod_model_action_menu"  parent="vuz_menu"/> 
+    </data>
+</odoo>

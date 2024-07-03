@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="prepod_model_view_list" model="ir.ui.view">
+        <field name="name">prepod_model.view.list</field>
+        <field name="model">new_module.prepods</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml"> 
+            <tree>
+                <field name="first_name"/>
+                <field name="last_name"/>
+                <field name="middle_name"/>
+                <field name="subject"/>
+                
+            </tree>
+        </field>
+    </record>
+
+     <record id="prepod_model_view_form" model="ir.ui.view">
+        <field name="name">prepod_model.view.form</field>
+        <field name="model">new_module.prepods</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml"> 
+            <form>
+                <sheet>
+                    <group>
+                        <field name="first_name"/>
+                        <field name="last_name"/>
+                        <field name="middle_name"/>
+                        <field name="subject"/>
+                        <field name = "f_group" widget="one2many_list">
+                            <tree>
+                                <field name = "group_faculty"/>
+                                <field name = "group_num"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+   
+    <record id = "prepod_model_action_menu" model = "ir.actions.act_window">
+        <field name="name">Преподаватель</field>
+        <field name="res_model">new_module.prepods</field>
+        <field name="views">[[False, "tree"], [False, "form"]]</field> 
+    </record>
+</odoo>

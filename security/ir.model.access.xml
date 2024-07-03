@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="access_my_module_vuz_prepod" model="ir.model.access">
+            <field name="name">access my module prepod</field>
+            <field name="model_id" ref="new_module.model_new_module_students" />
+            <field name="group_id" ref="new_module.group_vuz_prepod" />
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+        <record id="access_my_module_vuz_student" model="ir.model.access">
+            <field name="name">access my module student</field>
+            <field name="model_id" ref="new_module.model_new_module_students" />
+            <field name="group_id" ref="new_module.group_vuz_student" />
+            <field name="perm_read">1</field>
+            <field name="perm_write">0</field>
+            <field name="perm_create">0</field>
+            <field name="perm_unlink">0</field>
+        </record>
+        <record id="access_my_module_vuz_group" model="ir.model.access">
+            <field name="name">access my module group</field>
+            <field name="model_id" ref="new_module.model_new_module_groups" />
+            <field name="group_id" ref="new_module.group_vuz_prepod" />
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+        <record id="access_my_module_vuz_prepod_join" model="ir.model.access">
+            <field name="name">access my module prepods join</field>
+            <field name="model_id" ref="new_module.model_new_module_prepods" />
+            <field name="group_id" ref="new_module.group_vuz_prepod" />
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+        <record id="access_my_module_vuz_grades_prepod" model="ir.model.access">
+            <field name="name">access my module grades prepod</field>
+            <field name="model_id" ref="new_module.model_new_module_student_grades" />
+            <field name="group_id" ref="new_module.group_vuz_prepod" />
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+        <record id="access_my_module_vuz_grades_student" model="ir.model.access">
+            <field name="name">access my module grades student</field>
+            <field name="model_id" ref="new_module.model_new_module_student_grades" />
+            <field name="group_id" ref="new_module.group_vuz_student" />
+            <field name="perm_read">1</field>
+            <field name="perm_write">0</field>
+            <field name="perm_create">0</field>
+            <field name="perm_unlink">0</field>
+        </record>
+    </data>
+</odoo>

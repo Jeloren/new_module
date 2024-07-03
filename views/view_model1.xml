@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="model1_view_list" model="ir.ui.view">
+        <field name="name">model1.view.list</field>
+        <field name="model">new_module.students</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml"> 
+            <tree>
+                <field name="first_name"/>
+                <field name="last_name"/>
+                <field name="middle_name"/>
+                <field name="f_group"/>
+                <field name="age"/>
+                <field name="birth_day"/>
+            </tree>
+        </field>
+    </record>
+
+     <record id="model1_view_form" model="ir.ui.view">
+        <field name="name">model1.view.form</field>
+        <field name="model">new_module.students</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml"> 
+            <form>
+                <sheet>
+                    <group>
+                        <field name="first_name"/>
+                        <field name="last_name"/>
+                        <field name="middle_name"/>
+                        <field name="f_group"/>
+                        <field name="age"/>
+                        <field name="birth_day"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+   
+    <record id = "model1_action_menu" model = "ir.actions.act_window">
+        <field name="name">Окно</field>
+        <field name="res_model">new_module.students</field>
+        <field name="views">[[False, "tree"], [False, "form"]]</field> 
+    </record>
+</odoo>
