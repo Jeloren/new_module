@@ -4,3 +4,7 @@ from . import prepod_model
 from . import model_grade
 from . import model_subject
 from . import model_journal
+from . import spravka_treb
+from . import schedule
+from . import schedule_line
+from . import notify

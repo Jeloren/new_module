@@ -9,5 +9,8 @@
         <menuitem name="Журнал" id="journal_menu_root" action="model_journal_action_menu"  parent="vuz_menu"/> 
         <menuitem name="Оценки" id="grades_menu_root" action="model_student_grades_action_menu"  parent="vuz_menu"/> 
         <menuitem name="Предметы" id="subjects_menu_root" action="model_subject_action_menu"  parent="vuz_menu"/> 
+        <menuitem name="Справки" id="spravka_treb_menu_root" action="spravka_treb_action_menu"  parent="vuz_menu"/>
+        <menuitem name="Расписание" id="schedule_menu_root" action="schedule_action_menu"  parent="vuz_menu"/>
+        <menuitem name="Уведомления" id="notify_module_menu_root" action="model_notify_action_menu" parent="vuz_menu"/>
     </data>
 </odoo>

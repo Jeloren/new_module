@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_list_notify" model="ir.ui.view">
+        <field name="name">new_module.notify.list</field>
+        <field name="model">new_module.notify</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="enable_welcome_message" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id = "model_notify_action_menu" model = "ir.actions.act_window">
+        <field name="name">уведомления</field>
+        <field name="res_model">new_module.notify</field>
+        <field name="views">[[False, "tree"], [False, "form"]]</field>
+    </record>
+</odoo>

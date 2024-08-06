@@ -1,0 +1,46 @@
+<odoo>
+    <record id="spravka_treb_view_list" model="ir.ui.view">
+        <field name="name">spravka_treb.view.list</field>
+        <field name="model">new_module.spravka_treb</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="f_student"/>
+                <!-- <field name="f_subj"/>
+                <field name="f_grade"/> -->
+                <field name="f_group"/>
+                <field name="group_creating_date"/>
+                <field name="docx_file" readonly="1"/> 
+            </tree>
+        </field>
+    </record>
+
+    <record id="spravka_treb_view_form" model="ir.ui.view">
+        <field name="name">spravka_treb.view.form</field>
+        <field name="model">new_module.spravka_treb</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="generate_docx" string="Generate DOCX" type="object" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="f_student"/>
+                        <field name="f_group"/>
+                        <field name="group_creating_date"/>
+                        <!-- <field name="f_subj"/>
+                        <field name="f_grade"/> -->
+                        <field name="docx_file" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="spravka_treb_action_menu" model="ir.actions.act_window">
+        <field name="name">справка</field>
+        <field name="res_model">new_module.spravka_treb</field>
+        <field name="views">[[False, "tree"], [False, "form"]]</field>
+    </record>
+</odoo>

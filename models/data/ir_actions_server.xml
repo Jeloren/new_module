@@ -1,0 +1,10 @@
+<odoo>
+    <data noupdate="1">
+        <record id="action_show_welcome_message" model="ir.actions.server">
+            <field name="name">Show Welcome Message</field>
+            <field name="model_id" ref="model_new_module_notify"/>
+            <field name="state">code</field>
+            <field name="code">action = model.show_welcome_message()</field>
+        </record>
+    </data>
+</odoo>

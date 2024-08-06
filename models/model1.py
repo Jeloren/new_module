@@ -15,7 +15,11 @@ class Students(models.Model):
    
     f_group = fields.Many2one(string = 'Группа студента', comodel_name = "new_module.groups")
     
-    # grades_table = fields.One2many('new_module.student_grades', 'student_id', string='Оценки')
+    group_creating_date = fields.Date(string="Дата создания группы", compute="_compute_group_creating_date")
+    def _compute_group_creating_date(self):
+        for record in self:
+            record.group_creating_date = record.f_group.creating_date if record.f_group else False
+ 
     
     display_name = fields.Char(compute = "Method")
    
